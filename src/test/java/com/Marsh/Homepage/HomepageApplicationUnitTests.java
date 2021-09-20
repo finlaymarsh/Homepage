@@ -1,4 +1,4 @@
-package com.Marsh.Homepage.Unit;
+package com.Marsh.Homepage;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +9,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.hamcrest.Matchers.equalTo;
-
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.handler;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -23,9 +22,10 @@ class HomepageApplicationUnitTests {
 	@Test
 	void getHello() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/")
-		.accept(MediaType.APPLICATION_JSON))
+		.accept(MediaType.TEXT_HTML_VALUE))
 		.andExpect(status().isOk())
-		.andExpect(content().string(equalTo("Greetings from Spring Boot!\n")));
+		.andExpect(view().name("index.html"))
+		.andExpect(handler().methodName("getHome"));
 	}
 
 }
