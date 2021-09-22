@@ -1,0 +1,6 @@
+com/Marsh/Homepage/Controllers/PostControllerApi.class
+com/Marsh/Homepage/DAO/PostService.class
+com/Marsh/Homepage/DAO/PostRepository.class
+com/Marsh/Homepage/HomepageApplication.class
+com/Marsh/Homepage/Entities/Post.class
+com/Marsh/Homepage/DAO/PostServiceImpl.class

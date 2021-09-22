@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.Marsh.Homepage.Unit.HomepageApplicationUnitTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.314 s <<< FAILURE! - in com.Marsh.Homepage.Unit.HomepageApplicationUnitTests
-getHello  Time elapsed: 0.172 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<406>
-	at com.Marsh.Homepage.Unit.HomepageApplicationUnitTests.getHello(HomepageApplicationUnitTests.java:27)
-
