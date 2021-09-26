@@ -27,8 +27,7 @@ public class PostControllerApi {
 
     @Autowired
 	private PostService postService;
-
-
+    
     
     @GetMapping("/")
     public Iterable<Post> getAllPosts(){

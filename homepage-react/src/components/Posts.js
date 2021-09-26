@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import "../css/Posts.css";
 
 class Posts extends Component {
     state = {
