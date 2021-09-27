@@ -4,7 +4,7 @@ export default function cv(){
         <iframe 
         src="./assets/pdfs/finlay_marsh_cv.pdf" 
         frameborder="0"
-        class="pdf-viewer">
+        className="pdf-viewer">
      </iframe>
     )
 }

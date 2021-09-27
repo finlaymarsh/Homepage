@@ -8,11 +8,14 @@ import {
 import Homepage from './Homepage';
 import CV from './CV';
 import NavigationBar from './NavigationBar';
+import SortingAlgorithms from './SortingAlgorithms';
+
+import '../css/App.css';
 
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="website-container">
                 <NavigationBar/>
                 <switch>
                     <Route exact path="/">
@@ -20,6 +23,9 @@ class App extends Component {
                     </Route>
                     <Route path="/cv">
                         <CV/>
+                    </Route>
+                    <Route path="/sorting-algorithms">
+                        <SortingAlgorithms/>
                     </Route>
                 </switch>
             </div>

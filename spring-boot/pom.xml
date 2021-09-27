@@ -65,6 +65,13 @@
     		<artifactId>spring-boot-starter-hateoas</artifactId>
     	</dependency>
 
+		<dependency>
+			<groupId>sa</groupId>
+			<artifactId>sa</artifactId>
+			<scope>system</scope>
+			<version>1.0</version>
+			<systemPath>${project.basedir}/libs/Sorting.0.1.jar</systemPath>
+		</dependency>
 	</dependencies>
 
 	<build>

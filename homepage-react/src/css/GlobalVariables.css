@@ -1,0 +1,8 @@
+:root{
+    --global-margin-left:20px;
+    --global-margin-right:20px;
+    --global-margin-left-inverse:calc(var(--global-margin-left) * -1);
+    --global-margin-right-inverse:calc(var(--global-margin-right) * -1);
+    --global-margin-below-navbar:20px;
+    --global-font-code-text: 'Courier New';
+}

@@ -1,0 +1,4 @@
+.website-container{
+    margin-left:var(--global-margin-left);
+    margin-right:var(--global-margin-right);
+}

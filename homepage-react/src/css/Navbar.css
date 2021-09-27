@@ -1,4 +1,9 @@
-.nav{
-    margin-left:150px;
+.nav-bar{
+    margin-left: var(--global-margin-left-inverse);
+    margin-right: var(--global-margin-right-inverse);
+}
+
+.nav-text{
+    margin-left: var(--global-margin-left);
     font-size: 20px;
 }

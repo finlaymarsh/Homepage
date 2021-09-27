@@ -1,0 +1,8 @@
+.sa-container{
+    margin-top: var(--global-margin-below-navbar);
+    font-family: var(--global-font-code-text);
+}
+
+#random-button{
+    margin-top: -15px;
+}

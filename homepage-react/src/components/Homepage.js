@@ -16,18 +16,18 @@ class Homepage extends Component {
     render(){
         return(
             <div>
-                <div class="homepage">
+                <div>
 
-                    <button class="apiButton btn-primary" 
+                    <button className="apiButton btn-primary" 
                     onClick={() => this.post_api_ref.current.handleGetAllClick()}>
                         Fetch Posts</button>
 
-                    <button class="apiButton btn-success" 
+                    <button className="apiButton btn-success" 
                     onClick={() => this.post_api_ref.current.handleNewClick()}>
                         Create new Post
                     </button>
 
-                    <button class="apiButton btn-danger" 
+                    <button className="apiButton btn-danger" 
                     onClick={() => this.post_api_ref.current.handleDeleteClick()}>
                         Delete all Posts
                     </button>

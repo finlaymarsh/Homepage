@@ -49,8 +49,8 @@ class Posts extends Component {
 
     render() {
         return (
-            <div class="apiTable"> 
-                <table class="table table-bordered table-hover table-light table-striped table-sm">
+            <div className="apiTable"> 
+                <table className="table table-bordered table-hover table-light table-striped table-sm">
                     <thead>
                         <tr>
                             <th scope="col">Title</th>
