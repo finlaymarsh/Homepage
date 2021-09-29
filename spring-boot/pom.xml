@@ -70,7 +70,7 @@
 			<artifactId>sa</artifactId>
 			<scope>system</scope>
 			<version>1.0</version>
-			<systemPath>${project.basedir}/libs/Sorting.0.1.jar</systemPath>
+			<systemPath>${project.basedir}/libs/Sorting.0.2.jar</systemPath>
 		</dependency>
 	</dependencies>
 

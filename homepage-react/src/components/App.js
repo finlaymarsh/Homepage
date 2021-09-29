@@ -17,17 +17,17 @@ class App extends Component {
         return (
             <div className="website-container">
                 <NavigationBar/>
-                <switch>
+                <Switch>
                     <Route exact path="/">
                         <Homepage/>
                     </Route>
-                    <Route path="/cv">
+                    <Route exact path="/cv">
                         <CV/>
                     </Route>
                     <Route path="/sorting-algorithms">
                         <SortingAlgorithms/>
                     </Route>
-                </switch>
+                </Switch>
             </div>
         );
       }

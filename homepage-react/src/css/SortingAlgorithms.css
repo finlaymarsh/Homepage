@@ -3,6 +3,24 @@
     font-family: var(--global-font-code-text);
 }
 
+.code{
+    width:700px;
+}
+
 #random-button{
     margin-top: -15px;
+    width:115px;
+}
+
+#sort-button{
+    margin-top: 10px;
+    width:115px;
+}
+
+#main-title{
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+#left-nav{
+    margin-left: var(--global-margin-left-inverse);
 }

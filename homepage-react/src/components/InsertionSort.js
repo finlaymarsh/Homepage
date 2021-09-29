@@ -3,7 +3,7 @@ import BubbleSortApi from './BubbleSortApi';
 import '../css/Prettify.css'
 
 
-class BubbleSort extends Component {
+class InsertionSort extends Component {
     constructor(){
         super();
         this.sorting_algorithms_api_ref = React.createRef();
@@ -17,23 +17,23 @@ class BubbleSort extends Component {
 
     render() {
         const code = 
-        "public static int[] sort(int[] intListInput){\n" + 
-        "    int[] intList = Arrays.copyOf(intListInput, intListInput.length);\n" +  
-        "    boolean performedSwap = true;\n" +
-        "    while (performedSwap){\n"+
-        "        performedSwap = false;\n"+
-        "        for (int i = 1; i < this.intList.length; i++){\n"+
-        "            if (intList[i-1] > intList[i]){\n"+
-        "                swap(intList, i, i-1);\n"+
-        "                performedSwap = true;\n"+
-        "            }\n"+
+        "public static int[] sort(int[] intListInput){\n" +   
+        "    int[] intList = Arrays.copyOf(intListInput, intListInput.length);\n" + 
+        "    int sortedIndex = 1;\n" +
+        "    while (sortedIndex < intList.length){\n"+
+        "        int currentIndex = sortedIndex;\n"+
+        "        while (currentIndex > 0 && intList[currentIndex-1] >\n"+
+        "                                    intList[currentIndex]){\n"+
+        "            swap(intList, currentIndex-1, currentIndex);\n"+
+        "            currentIndex--;\n"+
         "        }\n"+
+        "        sortedIndex++;\n"+
         "    }\n"+
         "    return intList;\n" +
         "}\n"
         return (
             <div className="sa-container">
-                <h1 className="display-4" id="main-title">Bubble Sort</h1>
+                <h1 className="display-4" id="main-title">Insertion Sort</h1>
                 <p>Here is an array of 10 random integers between 0 and 99 inclusive.</p>
                 <div class="row">
                     <div class="col-md-4"> 
@@ -58,4 +58,4 @@ class BubbleSort extends Component {
       }
 }
 
-export default BubbleSort;
+export default InsertionSort;
