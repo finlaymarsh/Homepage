@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
-import BubbleSortApi from './BubbleSortApi';
-import '../css/Prettify.css'
-
+import CodeBox from '../CodeBox';
+import SortingAlgorithmApi from '../SortingAlgorithmApi';
 
 class InsertionSort extends Component {
     constructor(){
         super();
         this.sorting_algorithms_api_ref = React.createRef();
-    }
-
-    componentDidMount(){
-        const script = document.createElement("script");
-        script.src = "https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"; 
-        document.body.appendChild(script); 
     }
 
     render() {
@@ -37,7 +30,7 @@ class InsertionSort extends Component {
                 <p>Here is an array of 10 random integers between 0 and 99 inclusive.</p>
                 <div class="row">
                     <div class="col-md-4"> 
-                        <BubbleSortApi ref={this.sorting_algorithms_api_ref}/>
+                    <SortingAlgorithmApi ref={this.sorting_algorithms_api_ref} name="insertion-sort"/>
                     </div>
                     <div class="col-md-4">  
                         <button className="btn-danger" id="random-button" onClick={() => 
@@ -52,7 +45,7 @@ class InsertionSort extends Component {
                     </div>
                 </div>
                 <p>Here is the java code used to sort the array where intListInput is the integer array to be sorted.</p>
-                <pre className="prettyprint code">{code}</pre>
+                <CodeBox code={code}/>
             </div>
         );
       }

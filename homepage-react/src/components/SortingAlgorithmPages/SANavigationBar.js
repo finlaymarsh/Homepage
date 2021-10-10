@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Navbar, Nav} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-import '../css/SANavbar.css'
+import '../../css/SANavbar.css'
 
 class SANavigationBar extends Component {
   render() {
@@ -21,6 +21,9 @@ class SANavigationBar extends Component {
             </li>
             <li>
               <NavLink exact to="/sorting-algorithms/merge-sort" activeClassName="active" className="nav-link">Merge-Sort</NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/sorting-algorithms/quick-sort" activeClassName="active" className="nav-link">Quick-Sort</NavLink>
             </li>
           </ul>
         </Nav>

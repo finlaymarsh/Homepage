@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import sorting.BubbleSort;
 import sorting.InsertionSort;
 import sorting.MergeSort;
+import sorting.QuickSort;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -38,5 +39,10 @@ public class SortingAlgorithmsController {
     @PostMapping("/merge-sort")
     public int[] MergeSort(@Valid @RequestBody int[] currentList){
         return MergeSort.sort(currentList);
+    }
+
+    @PostMapping("/quick-sort")
+    public int[] QuickSort(@Valid @RequestBody int [] currentList){
+        return QuickSort.sort(currentList);
     }
 }

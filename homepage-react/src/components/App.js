@@ -8,7 +8,7 @@ import {
 import Homepage from './Homepage';
 import CV from './CV';
 import NavigationBar from './NavigationBar';
-import SortingAlgorithms from './SortingAlgorithms';
+import SortingAlgorithms from './SortingAlgorithmPages/SortingAlgorithms';
 
 import '../css/App.css';
 

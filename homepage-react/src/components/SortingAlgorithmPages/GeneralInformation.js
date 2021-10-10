@@ -1,20 +1,9 @@
 import React, { Component } from 'react';
-import BubbleSortApi from './BubbleSortApi';
-import '../css/Prettify.css'
+import '../../css/Prettify.css'
+import CodeBox from '../CodeBox';
 
 
 class GeneralInformation extends Component {
-    constructor(){
-        super();
-        this.sorting_algorithms_api_ref = React.createRef();
-    }
-
-    componentDidMount(){
-        const script = document.createElement("script");
-        script.src = "https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"; 
-        document.body.appendChild(script); 
-    }
-
     render() {
         const code1 = 
         "protected static void swap(int[] intList, int i, int j){\n" + 
@@ -34,9 +23,9 @@ class GeneralInformation extends Component {
             <div className="sa-container">
                 <h1 className="display-4" id="main-title">Methods used in Sorting Algorithms</h1>
                 <p>Here is the Java code for the swap method used in the sorting algorithms outlined on this website.</p>
-                <pre className="prettyprint" id="bubble-code">{code1}</pre>
+                <CodeBox code = {code1}/>
                 <p>Here is the Java code for the popHead method used in the sorting algorithms outlined on this website.</p>
-                <pre className="prettyprint" id="bubble-code">{code2}</pre>
+                <CodeBox code = {code2}/>
             </div>
         );
       }

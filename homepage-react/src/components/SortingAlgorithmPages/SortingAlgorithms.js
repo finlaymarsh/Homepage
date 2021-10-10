@@ -9,9 +9,10 @@ import SANavigationBar from './SANavigationBar';
 import BubbleSort from './BubbleSort';
 import InsertionSort from './InsertionSort';
 import MergeSort from './MergeSort';
+import QuickSort from './QuickSort';
 import GeneralInformation from './GeneralInformation';
 
-import '../css/SortingAlgorithms.css';
+import '../../css/SortingAlgorithms.css';
 
 
 class SortingAlgorithms extends Component {
@@ -36,6 +37,9 @@ class SortingAlgorithms extends Component {
                         </Route>
                         <Route path="/sorting-algorithms/merge-sort">
                             <MergeSort/>
+                        </Route>
+                        <Route path="/sorting-algorithms/quick-sort">
+                            <QuickSort/>
                         </Route>
                     </Switch>
                 </div>

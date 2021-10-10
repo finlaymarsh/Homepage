@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MergeSortApi from './MergeSortApi';
-import '../css/Prettify.css'
+import CodeBox from '../CodeBox';
+import SortingAlgorithmApi from '../SortingAlgorithmApi';
 
 
 class MergeSort extends Component {
@@ -9,15 +9,9 @@ class MergeSort extends Component {
         this.sorting_algorithms_api_ref = React.createRef();
     }
 
-    componentDidMount(){
-        const script = document.createElement("script");
-        script.src = "https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"; 
-        document.body.appendChild(script); 
-    }
-
     render() {
         const code1 = 
-        "public static int[] sort(int[] intListInput) {\n" +
+        "public static int[] sort(int[] intListInput){\n" +
         "    int[] intList = Arrays.copyOf(intListInput, intListInput.length);\n" +
         "    return mergeSort(intList);\n" +
         "}\n";
@@ -64,7 +58,7 @@ class MergeSort extends Component {
                 <p>Here is an array of 10 random integers between 0 and 99 inclusive.</p>
                 <div class="row">
                     <div class="col-md-4"> 
-                        <MergeSortApi ref={this.sorting_algorithms_api_ref}/>
+                    <SortingAlgorithmApi ref={this.sorting_algorithms_api_ref} name="merge-sort"/>
                     </div>
                     <div class="col-md-4">  
                         <button className="btn-danger" id="random-button" onClick={() => 
@@ -79,9 +73,9 @@ class MergeSort extends Component {
                     </div>
                 </div>
                 <p>Here is the java code used to sort the array where intListInput is the integer array to be sorted.</p>
-                <pre className="prettyprint code">{code1}</pre>
-                <pre className="prettyprint code">{code2}</pre>
-                <pre className="prettyprint code">{code3}</pre>
+                <CodeBox code={code1}/>
+                <CodeBox code={code2}/>
+                <CodeBox code={code3}/>
             </div>
         );
       }
