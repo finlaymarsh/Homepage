@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class SortingAlgorithmApi extends Component {
     state = {
         init_int_list: [],
-        sorted_int_list: []
+        sorted_int_list: [],
     };
 
     componentDidMount(){
@@ -15,6 +15,7 @@ class SortingAlgorithmApi extends Component {
         fetch('http://localhost:8080/api/sorting-algorithms/random-list')
         .then(response => response.json())
         .then((data) => {
+            this.ifExistsClearSortingInterval();
             this.setState({
                 init_int_list: data,
                 sorted_int_list: data})
@@ -31,7 +32,16 @@ class SortingAlgorithmApi extends Component {
         fetch('http://localhost:8080/api/sorting-algorithms/' + this.props.name, requestOptions)
         .then(response => response.json())
         .then((data) => {
-            this.setState({sorted_int_list: data})
+            let counter = 0;
+            var interval = setInterval(() => {
+                if (counter == data.length){
+                    this.ifExistsClearSortingInterval();
+                    return;
+                }
+                this.setState({sorted_int_list: data[counter]});
+                counter++;
+            }, 500);
+            this.setState({interval: interval});
         })
         .catch(console.log);
     }
@@ -42,6 +52,13 @@ class SortingAlgorithmApi extends Component {
 
     renderSortedElement(val){
         return (<div class="square-sorted col-sm"><p class="square-text">{val}</p></div>)
+    }
+
+    ifExistsClearSortingInterval(){
+        if (this.state.interval){
+            clearInterval(this.state.interval);
+            this.setState({interval: undefined});
+        }
     }
 
     render() {

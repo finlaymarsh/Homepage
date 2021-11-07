@@ -71,10 +71,10 @@ class QuickSort extends Component {
                 <h1 className="display-4" id="main-title">Quick Sort</h1>
                 <p>Here is an array of 10 random integers between 0 and 99 inclusive.</p>
                 <div class="row">
-                    <div class="col-md-4"> 
+                    <div class="col-lg"> 
                         <SortingAlgorithmApi ref={this.sorting_algorithms_api_ref} name="quick-sort"/>
                     </div>
-                    <div class="col-md-4">  
+                    <div class="col-md">  
                         <button className="btn-danger" id="random-button" onClick={() => 
                             this.sorting_algorithms_api_ref.current.getInitialRandomList()}>
                             Randomise!

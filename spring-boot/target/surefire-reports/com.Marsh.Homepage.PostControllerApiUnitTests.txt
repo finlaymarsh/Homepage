@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.Marsh.Homepage.PostControllerApiUnitTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.877 s <<< FAILURE! - in com.Marsh.Homepage.PostControllerApiUnitTests
+getHello  Time elapsed: 0.173 s  <<< FAILURE!
+java.lang.AssertionError: View name expected:<index.html> but was:<index>
+	at com.Marsh.Homepage.PostControllerApiUnitTests.getHello(PostControllerApiUnitTests.java:27)
+

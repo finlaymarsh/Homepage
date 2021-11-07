@@ -7,6 +7,28 @@
     width:700px;
 }
 
+.square{
+    display: flex;
+    background-color: coral;
+    text-align: center;
+    margin: 10px;
+    min-height: 55px;
+    min-width: 55px;
+}
+
+.square-sorted{
+    display: flex;
+    background-color:violet;
+    text-align: center;
+    margin: 10px;
+    min-height: 55px;
+    min-width: 55px;
+}
+
+.square-text{
+    margin:auto;
+}
+
 #random-button{
     margin-top: -15px;
     width:115px;

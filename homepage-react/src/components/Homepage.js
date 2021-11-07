@@ -35,7 +35,7 @@ class Homepage extends Component {
                     <Posts ref={this.post_api_ref}/>
 
                 </div>
-                <img src="./assets/images/signature.png" />
+                <img src="./assets/images/signature.png" alt="signature"/>
             </div>
         );
     }

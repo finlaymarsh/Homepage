@@ -1,5 +1,7 @@
 package com.Marsh.Homepage.Controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.http.MediaType;
@@ -27,22 +29,22 @@ public class SortingAlgorithmsController {
     }
 
     @PostMapping("/bubble-sort")
-    public int[] BubbleSort(@Valid @RequestBody int[] currentList){
+    public List<int[]> bubbleSort(@Valid @RequestBody int[] currentList){
         return BubbleSort.sort(currentList);
     }
 
     @PostMapping("/insertion-sort")
-    public int[] InsertionSort(@Valid @RequestBody int[] currentList){
+    public List<int[]> insertionSort(@Valid @RequestBody int[] currentList){
         return InsertionSort.sort(currentList);
     }
 
     @PostMapping("/merge-sort")
-    public int[] MergeSort(@Valid @RequestBody int[] currentList){
+    public int[] mergeSort(@Valid @RequestBody int[] currentList){
         return MergeSort.sort(currentList);
     }
 
     @PostMapping("/quick-sort")
-    public int[] QuickSort(@Valid @RequestBody int [] currentList){
+    public int[] quickSort(@Valid @RequestBody int [] currentList){
         return QuickSort.sort(currentList);
     }
 }

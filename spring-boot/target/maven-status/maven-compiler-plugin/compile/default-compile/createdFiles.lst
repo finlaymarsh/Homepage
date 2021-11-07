@@ -1,3 +1,4 @@
+com/Marsh/Homepage/Controllers/SortingAlgorithmsController.class
 com/Marsh/Homepage/Controllers/PostControllerApi.class
 com/Marsh/Homepage/DAO/PostService.class
 com/Marsh/Homepage/DAO/PostRepository.class
